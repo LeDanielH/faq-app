@@ -1,0 +1,71 @@
+//$mw-slider: 320px;
+.faq {
+  header {
+    position: relative;
+  }
+  &__slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include padding($spacing);
+    @include size(auto, 100px);
+    background-color: #999999;
+    &-image {
+      @include position(absolute, 50% null null 50%);
+      transform: translate(-50%, -50%);
+      background-color: deepskyblue;
+      transition: opacity $duration ease, visibility $duration ease;
+      color: black;
+      flex: 0 0 auto;
+      &:first-of-type {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:last-of-type {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &-item {
+      @include size(75px);
+      border: 1px solid black;
+      border-radius: 50%;
+      @include padding(5px);
+      flex: 0 0 80px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all $duration ease;
+      &:nth-child(2) {
+        transform: translateX(120%);
+      }
+      &:nth-child(3) {
+        transform: translateX(230%);
+      }
+      &:nth-child(4) {
+        transform: translateX(340%);
+      }
+      &.active {
+        @include size(85px);
+        background-color: red;
+        transform: translateX(0%);
+        border: 5px solid transparent;
+        .faq__slider-image {
+          background-color: darkorange;
+          color: white;
+          &:first-of-type {
+            opacity: 1;
+            visibility: visible;
+          }
+          &:last-of-type {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+}
