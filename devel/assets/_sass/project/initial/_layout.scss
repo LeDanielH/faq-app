@@ -11,6 +11,7 @@
     @include margin($spacing null null null);
     @include position(fixed, null 0 0 0);
     z-index: 10;
+    max-width: 960px;
   }
   @media(max-height: 500px) {
     article {
