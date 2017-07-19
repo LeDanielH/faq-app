@@ -1,5 +1,18 @@
 .faq {
   &__accordion {
+    max-height: 400px;
+    transition: max-height $tr-duration ease ($tr-duration * 0.5);
+    flex: 0 0 25%;
+    max-width: 25%;
+
+    &.active {
+      max-height: initial;
+      max-height: auto;
+    }
+    label {
+      display: block;
+      @include padding(null $spacing);
+    }
     &-content {
       max-height: 0;
       opacity: 0;
@@ -34,5 +47,10 @@
         }
       }
     }
+  }
+  article {
+    display: flex;
+    justify-content: center;
+    transition: transform $tr-duration ease ($tr-duration * 0.5);
   }
 }

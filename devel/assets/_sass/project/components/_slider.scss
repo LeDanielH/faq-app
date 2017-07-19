@@ -33,7 +33,7 @@
       border: 1px solid black;
       border-radius: 50%;
       @include padding(5px);
-      flex: 0 0 80px;
+      flex: 0 0 75px;
       position: absolute;
       display: flex;
       justify-content: center;
@@ -49,10 +49,8 @@
         transform: translateX(340%);
       }
       &.active {
-        @include size(85px);
         background-color: red;
-        transform: translateX(0%);
-        border: 5px solid transparent;
+        transform: translateX(0%) scale(1.1);
         .faq__slider-image {
           background-color: darkorange;
           color: white;

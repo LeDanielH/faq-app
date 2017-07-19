@@ -3,10 +3,7 @@
     max-width: 960px;
     overflow: hidden;
   }
-  article {
-    @include padding(null $spacing);
-    @include margin(null null (($h-button*2)+($spacing*2)) null);
-  }
+
   footer {
     @include margin($spacing null null null);
     @include position(fixed, null 0 0 0);
@@ -14,9 +11,6 @@
     max-width: 960px;
   }
   @media(max-height: 500px) {
-    article {
-      @include margin(null null $spacing null);
-    }
     footer {
       @include position(static, null)
     }

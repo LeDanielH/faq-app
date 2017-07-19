@@ -1,23 +1,16 @@
 .faq {
   &__title {
     text-align: center;
-    transform: translateY(100%);
-    @include position(absolute, null);
     line-height: 1;
-    opacity: 0;
-    visibility: hidden;
     transition: all $duration ease;
-    &.active {
-      transform: translateY(0%);
-      opacity: 1;
-      visibility: visible;
-    }
+    width: 25%;
+    flex: 0 0 25%;
     &s {
       @include size(auto, 50px);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      transition: transform $tr-duration ease ($tr-duration * 0.25);
     }
   }
 }
