@@ -1,13 +1,15 @@
 .faq {
   &__accordion {
     max-height: 400px;
-    transition: max-height $tr-duration ease ($tr-duration * 0.5);
+    transition: max-height $tr-duration ease ($tr-duration * 0.5), opacity $tr-duration ease ($tr-duration * 0.5);
     flex: 0 0 25%;
     max-width: 25%;
+    opacity: 0;
 
     &.active {
       max-height: initial;
       max-height: auto;
+      opacity: 1;
     }
     label {
       display: block;
