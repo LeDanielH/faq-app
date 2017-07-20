@@ -30,14 +30,14 @@ const Slider = {
 		for(let i = this.currentIndex - 1; i >= 0; i--) {
             this.previousCount++;
             this.slides[i].classList.remove('active');
-            this.slides[i].style.transform = `translateX(-${this.previousCount * this.transformIncrementCircles}%)`;
+            this.slides[i].style.transform = `translate3d(-${this.previousCount * this.transformIncrementCircles}%, 0, 0)`;
 		}
 
         /* GET NEXT SIBLINGS */
         for(let i = this.currentIndex + 1; i < this.slidesLength; i++) {
             this.nextCount++;
             this.slides[i].classList.remove('active');
-            this.slides[i].style.transform = `translateX(${this.nextCount * this.transformIncrementCircles}%)`;
+            this.slides[i].style.transform = `translate3d(${this.nextCount * this.transformIncrementCircles}%, 0, 0)`;
         }
 
         this.previousCount = 0;
@@ -45,8 +45,8 @@ const Slider = {
     },
 
     switchContainer() {
-        this.titles[0].parentNode.style.transform = `translateX(-${this.currentIndex * (100/this.slidesLength)}%)`;
-        this.accordionsWrapper.style.transform = `translateX(-${this.currentIndex * (100/this.slidesLength)}%)`;
+        this.titles[0].parentNode.style.transform = `translate3d(-${this.currentIndex * (100/this.slidesLength)}%, 0, 0)`;
+        this.accordionsWrapper.style.transform = `translate3d(-${this.currentIndex * (100/this.slidesLength)}%, 0, 0)`;
         for (let i = 0; i < this.slidesLength; i++) {this.accordions[i].classList.remove('active');}
         this.accordions[this.currentIndex].classList.add('active');
     },

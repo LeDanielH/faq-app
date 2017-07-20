@@ -20,8 +20,8 @@ $c-blur-active: rgba(255,133,11,0.5);
 
     &-image {
       @include position(absolute, 50% null null 50%);
-      transform: translate(-50%, -50%);
-      transition: opacity $duration ease, visibility $duration ease;
+      transform: translate3d(-50%, -50%, 0) scale(0.8);
+      transition: opacity $duration ease, visibility $duration ease, transform $tr-duration ease;
       color: $c-header-title;
       flex: 0 0 auto;
       @include size($circleSize * 0.5, auto);
@@ -75,16 +75,17 @@ $c-blur-active: rgba(255,133,11,0.5);
       box-shadow: 0px 0px 10px 1px $c-blur-notactive;
       @for $i from 2 through 10 {
         &:nth-child(#{$i}) {
-          transform: translateX(($i - 1) * $sliderIncrement);
+          transform: translate3d(($i - 1) * $sliderIncrement, 0, 0);
         }
       }
 
       &.active {
         background-color: $c-orange;
-        transform: translateX(0) scale(1.13);
+        transform: translate3d(0, 0, 0) scale(1.13);
         transform-origin: center top;
         box-shadow: 0px 0px 10px 2px $c-blur-active;
         .faq__slider-image {
+          transform: translate3d(-50%, -50%, 0) scale(1);
           &:first-of-type {
             opacity: 1;
             visibility: visible;
