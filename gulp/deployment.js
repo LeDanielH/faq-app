@@ -1,3 +1,5 @@
+
+
 var vars = require('./vars'),
 	gulp = require('gulp'),
 	localServer = require('gulp-connect'),
@@ -6,7 +8,7 @@ var vars = require('./vars'),
 
 gulp.task('deploy', function() {
 	return gulp.src(vars.paths.deploy)
-	.pipe(deploy());
+		.pipe(deploy());
 });
 
 gulp.task('localServer', function () {
