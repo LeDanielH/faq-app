@@ -35,10 +35,12 @@
     &-arrow {
       display: inline-block;
       transition: transform $tr-duration ease;
-      i {
-        color: $c-accordion-title;
-        transition: color $tr-duration ease;
-        font-size: 12px;
+      &__icon {
+        @include size(7px);
+        transform: rotate(-45deg);
+        transition: border $tr-duration ease;
+        border-left: 2px solid $c-accordion-title;
+        border-bottom: 2px solid $c-accordion-title;
       }
     }
     &-label {
@@ -60,8 +62,8 @@
         border-bottom: 1px solid $c-orange;
         .faq__accordion-arrow {
           transform: rotate(180deg);
-          i {
-            color: $c-orange;
+          &__icon{
+            border-color: $c-orange;
           }
         }
         .faq__accordion-content {
