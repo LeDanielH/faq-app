@@ -21,6 +21,8 @@
       border-top: 1px solid $c-border-grey;
       color: $c-accordion-content;
       font-size: 14px;
+      @include padding(null ($spacing*2))
+
     }
     &-header {
       display: flex;
@@ -28,6 +30,7 @@
       align-items: center;
       height: 40px;
       cursor: pointer;
+      @include padding(null ($spacing*2))
     }
     &-arrow {
       display: inline-block;
@@ -48,7 +51,7 @@
       border-top: 1px solid $c-border-grey;
       border-bottom: 1px solid $c-border-grey;
       background-color: $c-accordion-background-closed;
-      @include padding(($spacing * 0.5) ($spacing*2) null ($spacing*2));
+      @include padding(($spacing * 0.5) 0 null 0);
       transition: border $tr-duration ease, background-color $tr-duration ease;
 
       &.active {
