@@ -15,7 +15,9 @@ const Accordion = {
 	},
 	init: function () {
 		this.elements();
-		this.accordions.forEach(accordion => accordion.addEventListener('click', () => this.handler(accordion)));
+		for(let i = 0; i < this.accordions.length; i++) {
+			this.accordions[i].addEventListener('click',() => this.handler(this.accordions[i]));
+		}
     }
 };
 
