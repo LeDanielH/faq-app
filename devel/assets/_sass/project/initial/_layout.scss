@@ -2,6 +2,8 @@
   &__container {
     max-width: 960px;
     overflow: hidden;
+    background-color: $c-header-background;
+    height: 100%;
   }
 
   footer {
