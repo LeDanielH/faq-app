@@ -1,0 +1,22 @@
+.faq {
+	&__dip {
+		display: flex;
+		margin-top: -20px;
+		position: relative;
+		overflow: visible;
+		&-side {
+			flex: 1 1 auto;
+			background-color: white;
+			border-top: 1px solid $c-orange;
+		}
+		&-circle {
+			flex: 0 0 100px;
+			max-width: 100px;
+			width: 100%;
+			height: auto;
+			img {
+				display: block;
+			}
+		}
+	}
+}

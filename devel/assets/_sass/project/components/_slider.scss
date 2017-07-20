@@ -1,21 +1,19 @@
 //$mw-slider: 320px;
-$circleSize: 80px;
+$circleSize: 82px;
 $circleDummySize: $circleSize + 30px;
 $sliderIncrement: 115%;
 .faq {
   header {
     position: relative;
   }
-
   &__slider {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
     @include padding($spacing);
-    @include size(auto, 85px);
+    @include size(auto, 92px);
     background-color: $c-header-background;
-    border-bottom: 1px solid $c-orange;
     overflow: hidden;
 
     &-image {
@@ -81,6 +79,7 @@ $sliderIncrement: 115%;
       &.active {
         background-color: $c-orange;
         transform: translateX(0) scale(1.1);
+        transform-origin: center top;
         z-index: 2;
         .faq__slider-image {
           &:first-of-type {
@@ -93,20 +92,6 @@ $sliderIncrement: 115%;
           }
         }
       }
-    }
-  }
-  &__dummy {
-    overflow: hidden;
-    @include size($circleDummySize, 20px);
-    @include position(absolute, null null -20px null);
-    &-dip {
-      display: block;
-      @include position(absolute, null null 0 50%);
-      @include size($circleDummySize);
-      border-radius: 50%;
-      @include margin(null null null (-$circleDummySize * 0.5));
-      background-color: $c-header-background;
-      border: 1px solid $c-orange;
     }
   }
 }
