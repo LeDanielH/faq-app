@@ -6,12 +6,13 @@ $i-fontsize: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    i {
+    background-color: white;
+    .faq__app-back {
       @include position(absolute, 50% null null ($spacing*0.5));
       font-size: $i-fontsize;
-      margin-top: -($i-fontsize * 0.5);
+      margin-top: -(($i-fontsize * 0.5) - 1px);
       color: $c-accordion-title;
-
+      padding: 2px;
     }
     h1 {
       text-align: center;
