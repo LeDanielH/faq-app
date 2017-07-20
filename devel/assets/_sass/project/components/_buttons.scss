@@ -3,12 +3,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 40px;
     text-decoration: none;
     color: black;
-    border: 1px solid lightblue;
+    border: 1px solid $c-border-grey;
+    background-color: white;
+    transition: background-color $tr-duration ease;
     i {
       margin-right: $spacing;
+      &.fa-volume-control-phone {
+        transform: rotate(-30deg);
+        transition: transform $tr-duration ease;
+      }
+    }
+    &:hover {
+      background-color: $c-header-background;
+      i.fa-volume-control-phone {
+        transform: rotate(-15deg);
+      }
     }
   }
 }

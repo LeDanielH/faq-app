@@ -44,6 +44,8 @@ $circleDummySize: $circleSize + 30px;
       align-items: center;
       transition: all $duration ease;
       background-color: white;
+      cursor: pointer;
+      user-select: none;
       &:nth-child(2) {
         transform: translateX(120%);
       }
