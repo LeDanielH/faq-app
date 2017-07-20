@@ -11,41 +11,63 @@
       max-height: auto;
       opacity: 1;
     }
-    label {
-      display: block;
-      @include padding(null $spacing);
-    }
+
     &-content {
       max-height: 0;
       opacity: 0;
       display: block;
       transition: all $duration ease;
       user-select: none;
+      border-top: 1px solid $c-border-grey;
+      color: $c-accordion-content;
+      font-size: 14px;
     }
     &-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
+      height: 40px;
       cursor: pointer;
     }
     &-arrow {
       display: inline-block;
-      transition: transform $duration ease;
+      transition: transform $tr-duration ease;
+      i {
+        color: $c-accordion-title;
+        transition: color $tr-duration ease;
+        font-size: 12px;
+      }
     }
+    &-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    &-panel {
+      border-top: 1px solid $c-border-grey;
+      border-bottom: 1px solid $c-border-grey;
+      background-color: $c-accordion-background-closed;
+      @include padding(($spacing * 0.5) ($spacing*2) null ($spacing*2));
+      transition: border $tr-duration ease, background-color $tr-duration ease;
 
-    input[type="radio"] {
-      display: none;
-      &:checked {
-        & ~ .faq__accordion-header {
-          .faq__accordion-arrow {
-            transform: rotate(180deg);
+      &.active {
+        background-color: $c-accordion-background-open;
+        border-top: 1px solid $c-orange;
+        border-bottom: 1px solid $c-orange;
+        .faq__accordion-arrow {
+          transform: rotate(180deg);
+          i {
+            color: $c-orange;
           }
         }
-        & ~ .faq__accordion-content {
+        .faq__accordion-content {
           max-height: 200px;
           opacity: 1;
           user-select: auto;
+          @include padding($spacing null);
+        }
+        .faq__accordion-label {
+
         }
       }
     }
@@ -54,5 +76,6 @@
     display: flex;
     justify-content: center;
     transition: transform $tr-duration ease ($tr-duration * 0.5);
+    background-color: white;
   }
 }
