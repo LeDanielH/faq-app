@@ -2,8 +2,6 @@
   &__accordion {
     max-height: 400px;
     transition: max-height $tr-duration ease ($tr-duration * 0.5), opacity $tr-duration ease ($tr-duration * 0.5);
-    flex: 0 0 (100% * 1/6);
-    max-width: 100% * 1/6;
     opacity: 0;
 
     &.active {

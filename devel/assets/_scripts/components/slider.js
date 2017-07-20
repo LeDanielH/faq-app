@@ -1,5 +1,5 @@
 const Slider = {
-	transformIncrementCircles: 110,
+	transformIncrementCircles: 115,
 	currentIndex: 0,
 	previousCount: 0,
 	nextCount: 0,
@@ -10,6 +10,15 @@ const Slider = {
 		this.accordionsWrapper = document.querySelector('.faq__container > article');
 		this.accordions = this.accordionsWrapper.querySelectorAll('.faq__accordion');
     },
+	setElements() {
+		for(let i = 0; i < this.slidesLength; i++) {
+			this.titles[i].style.flexBasis = `${100 * (1/this.slidesLength)}%`;
+			this.titles[i].style.maxWidth = `${100 * (1/this.slidesLength)}%`;
+			this.accordions[i].style.flexBasis = `${100 * (1/this.slidesLength)}%`;
+			this.accordions[i].style.maxWidth = `${100 * (1/this.slidesLength)}%`;
+		}
+	},
+
 	switchSlide(element) {
 		this.currentIndex = parseInt(element.dataset.page - 1);
 		element.classList.add('active');
@@ -49,6 +58,7 @@ const Slider = {
 	init: function () {
 		this.elements();
 		this.prepareContainer();
+		this.setElements();
 		this.slides.forEach(slide => slide.addEventListener('click', () => {
 		    this.switchSlide(slide);
 		    this.switchContainer();
