@@ -54,7 +54,7 @@ var paths = {
 		},
 		fontAwesomeFont: {
 			src: bower + 'font-awesome/fonts/**/*.+(eot|svg|woff|woff2|ttf)',
-			dest: assetsSrc + '_data/fonts/font-awesome/'
+			dest: assetsSrc + 'data/fonts/font-awesome/'
 		}
 	},
 
@@ -73,16 +73,16 @@ var paths = {
 	data: {
 		images: {
 			src: assetsSrc + '_data/images/**/*.+(png|jpg|svg|gif)',
-			dest: assetsDest + '_data/images/'
+			dest: assetsDest + 'data/images/'
 		},
 		json: {
 			src: assetsSrc + '_data/json/',
-			dest: assetsDest + '_data/json/',
+			dest: assetsDest + 'data/json/',
 			watch: assetsSrc + '_data/json/**/*.json'
 		},
 		fonts: {
 			src: assetsSrc + '_data/fonts/**/*.+(eot|svg|woff|woff2|ttf)',
-			dest: assetsDest + '_data/fonts/'
+			dest: assetsDest + 'data/fonts/'
 		}
 	},
 
