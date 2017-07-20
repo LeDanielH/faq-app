@@ -1,0 +1,25 @@
+$i-fontsize: 14px;
+.faq {
+  &__app {
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      @include position(absolute, 50% null null ($spacing*0.5));
+      font-size: $i-fontsize;
+      margin-top: -($i-fontsize * 0.5);
+      color: $c-accordion-title;
+
+    }
+    h1 {
+      text-align: center;
+      @include margin(0 null);
+      font-size: 15px;
+      font-weight: normal;
+      color: $c-header-title;
+      text-transform: uppercase;
+    }
+  }
+}

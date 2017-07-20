@@ -1,22 +1,27 @@
 //$mw-slider: 320px;
+$circleSize: 70px;
+$circleDummySize: $circleSize + 30px;
 .faq {
   header {
     position: relative;
   }
+
   &__slider {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     @include padding($spacing);
-    @include size(auto, 100px);
-    background-color: #999999;
+    @include size(auto, 85px);
+    background-color: $c-header-background;
+    border-bottom: 1px solid $c-orange;
+    overflow: hidden;
+
     &-image {
       @include position(absolute, 50% null null 50%);
       transform: translate(-50%, -50%);
-      background-color: deepskyblue;
       transition: opacity $duration ease, visibility $duration ease;
-      color: black;
+      color: $c-header-title;
       flex: 0 0 auto;
       &:first-of-type {
         opacity: 0;
@@ -29,16 +34,16 @@
     }
 
     &-item {
-      @include size(75px);
-      border: 1px solid black;
+      @include size($circleSize);
       border-radius: 50%;
       @include padding(5px);
-      flex: 0 0 75px;
+      flex: 0 0 $circleSize;
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all $duration ease;
+      background-color: white;
       &:nth-child(2) {
         transform: translateX(120%);
       }
@@ -49,8 +54,10 @@
         transform: translateX(340%);
       }
       &.active {
-        background-color: red;
-        transform: translateX(0%) scale(1.1);
+        background-color: $c-orange;
+        transform: translateX(0) scale(1.1);
+        //transform-origin: top center;
+        z-index: 2;
         .faq__slider-image {
           background-color: darkorange;
           color: white;
@@ -64,6 +71,20 @@
           }
         }
       }
+    }
+  }
+  &__dummy {
+    overflow: hidden;
+    @include size($circleDummySize, 20px);
+    @include position(absolute, null null -20px null);
+    &-dip {
+      display: block;
+      @include position(absolute, null null 0 50%);
+      @include size($circleDummySize);
+      border-radius: 50%;
+      @include margin(null null null (-$circleDummySize * 0.5));
+      background-color: $c-header-background;
+      border: 1px solid $c-orange;
     }
   }
 }

@@ -5,12 +5,20 @@
     transition: all $duration ease;
     width: 25%;
     flex: 0 0 25%;
+    @include margin(null null ($spacing) null);
+    h2 {
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
     &s {
       @include size(auto, 50px);
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       transition: transform $tr-duration ease ($tr-duration * 0.25);
+      background-color: white;
+      border-bottom: 1px solid $c-border-grey;
     }
   }
 }
