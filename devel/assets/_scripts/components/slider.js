@@ -61,10 +61,12 @@ const Slider = {
 		this.elements();
 		this.prepareContainer();
 		this.setElements();
-		this.slides.forEach(slide => slide.addEventListener('click', () => {
-		    this.switchSlide(slide);
-		    this.switchContainer();
-		}))
+		for (let i = 0; i < this.slidesLength; i++) {
+			this.slides[i].addEventListener('click',() => {
+				this.switchSlide(this.slides[i]);
+				this.switchContainer();
+			})
+		}
 	}
 };
 
