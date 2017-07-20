@@ -11,7 +11,8 @@
     "start": "gulp",
     "installNpmPackages": "npm i",
     "postinstall": "bower install",
-    "prepareLibs": "gulp first-time"
+    "prepareLibs": "gulp first-time",
+    "deploy": "gulp deploy-to-ghpages"
   },
   "author": "Daniel Hoksza <daniel.hoksza@gmail.com> (http://ledanielh.github.io/)",
   "license": "ISC",
