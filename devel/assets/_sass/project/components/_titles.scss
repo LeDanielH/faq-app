@@ -4,6 +4,8 @@
     line-height: 1;
     transition: all $duration ease;
     @include margin(null null ($spacing) null);
+    flex-grow: 0;
+    flex-shrink: 0;
     h2 {
       font-size: 14px;
       font-weight: normal;

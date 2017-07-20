@@ -3,6 +3,7 @@ const Slider = {
 	currentIndex: 0,
 	previousCount: 0,
 	nextCount: 0,
+
 	elements() {
         this.slides = document.querySelectorAll('.faq__slider-item');
         this.slidesLength = this.slides.length;
@@ -10,6 +11,7 @@ const Slider = {
 		this.accordionsWrapper = document.querySelector('.faq__container > article');
 		this.accordions = this.accordionsWrapper.querySelectorAll('.faq__accordion');
     },
+
 	setElements() {
 		for(let i = 0; i < this.slidesLength; i++) {
 			this.titles[i].style.flexBasis = `${100 * (1/this.slidesLength)}%`;

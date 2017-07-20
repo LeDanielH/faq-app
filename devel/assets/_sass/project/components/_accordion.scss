@@ -3,6 +3,8 @@
     max-height: 400px;
     transition: max-height $tr-duration ease ($tr-duration * 0.5), opacity $tr-duration ease ($tr-duration * 0.5);
     opacity: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
 
     &.active {
       max-height: initial;
