@@ -14,26 +14,37 @@
 <div class="faq__container">
     <header>
         <section class="faq__app">
-            <i class="fa fa-chevron-left"></i>
+	        <a href="#" class="faq__app-back">
+		        <i class="fa fa-chevron-left"></i>
+	        </a>
+
             <h1>app title</h1>
         </section>
         <section class="faq__slider">
             <div class="faq__slider-item active" data-page="1">
-                <div class="faq__slider-image"><i class="fa fa-circle fa-3x"></i></div>
-                <div class="faq__slider-image"><i class="fa fa-circle fa-3x"></i></div>
+                <img class="faq__slider-image circle" src="./assets/_data/images/icon-14-inverse.png">
+                <img class="faq__slider-image circle" src="./assets/_data/images/icon-14.png">
             </div>
             <div class="faq__slider-item" data-page="2">
-                <div class="faq__slider-image"><i class="fa fa-phone fa-3x"></i></div>
-                <div class="faq__slider-image"><i class="fa fa-phone fa-3x"></i></div>
+	            <img class="faq__slider-image phone" src="./assets/_data/images/icon-03-inverse.png">
+	            <img class="faq__slider-image phone" src="./assets/_data/images/icon-03.png">
             </div>
             <div class="faq__slider-item" data-page="3">
-                <div class="faq__slider-image"><i class="fa fa-handshake-o fa-3x"></i></div>
-                <div class="faq__slider-image"><i class="fa fa-handshake-o fa-3x"></i></div>
+	            <img class="faq__slider-image note" src="./assets/_data/images/icon-11-inverse.png">
+	            <img class="faq__slider-image note" src="./assets/_data/images/icon-11.png">
             </div>
             <div class="faq__slider-item" data-page="4">
-                <div class="faq__slider-image"><i class="fa fa-gamepad fa-3x"></i></div>
-                <div class="faq__slider-image"><i class="fa fa-gamepad fa-3x"></i></div>
+	            <img class="faq__slider-image hand--hi" src="./assets/_data/images/icon-05-inverse.png">
+	            <img class="faq__slider-image hand--hi" src="./assets/_data/images/icon-05.png">
             </div>
+	        <div class="faq__slider-item" data-page="5">
+		        <img class="faq__slider-image hand--currency" src="./assets/_data/images/icon-01-inverse.png">
+		        <img class="faq__slider-image hand--currency" src="./assets/_data/images/icon-01.png">
+	        </div>
+	        <div class="faq__slider-item" data-page="6">
+		        <img class="faq__slider-image data" src="./assets/_data/images/icon-12-inverse.png">
+		        <img class="faq__slider-image data" src="./assets/_data/images/icon-12.png">
+	        </div>
             <div class="faq__dummy">
                 <div class="faq__dummy-dip"></div>
             </div>
@@ -51,6 +62,12 @@
             <div class="faq__title" data-page="4">
                 <h2>This is title 4</h2>
             </div>
+	        <div class="faq__title" data-page="5">
+		        <h2>This is title 5</h2>
+	        </div>
+	        <div class="faq__title" data-page="6">
+		        <h2>This is title 6</h2>
+	        </div>
         </section>
     </header>
     <article>
@@ -227,15 +244,88 @@
                 </div>
             </div>
         </section>
+	    <section class="faq__accordion active" data-page="5">
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 5 1</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 5 2</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 5 3</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+	    </section>
+	    <section class="faq__accordion" data-page="6">
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 6 1</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 6 2</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 6 3</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+		    <div class="faq__accordion-panel">
+			    <div class="faq__accordion-header">
+				    <h3 class="faq__accordion-label">Accordion Title 6 4</h3>
+				    <div class="faq__accordion-arrow"><i class="fa fa-chevron-down"></i></div>
+			    </div>
+			    <div class="faq__accordion-content">
+				    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid dolore dolorem ea,
+				    esse ex fugiat laboriosam maxime mollitia natus non quae similique sunt temporibus ullam!
+				    Ex sed tempora velit!
+			    </div>
+		    </div>
+	    </section>
     </article>
-    <footer>
-        <section class="faq__favorite">
-            <a class="faq__btn" href="#"><i class="fa fa-star-o"></i>Star item</a>
-        </section>
-        <section class="faq__callus">
-            <a class="faq__btn" href="#"><i class="fa fa-volume-control-phone"></i>Call us</a>
-        </section>
-    </footer>
 </div>
 <script src="./assets/generated/scripts.js"></script>
 </body>
