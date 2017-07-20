@@ -3,8 +3,9 @@
     text-align: center;
     line-height: 1;
     transition: all $duration ease;
-    width: 25%;
-    flex: 0 0 25%;
+    flex: 0 0 (100% * 1/6);
+    max-width: 100% * 1/6;
+    width: 100% * 1/6;
     @include margin(null null ($spacing) null);
     h2 {
       font-size: 14px;

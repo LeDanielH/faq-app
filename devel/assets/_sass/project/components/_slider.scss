@@ -1,6 +1,7 @@
 //$mw-slider: 320px;
-$circleSize: 70px;
+$circleSize: 80px;
 $circleDummySize: $circleSize + 30px;
+$sliderIncrement: 115%;
 .faq {
   header {
     position: relative;
@@ -23,6 +24,7 @@ $circleDummySize: $circleSize + 30px;
       transition: opacity $duration ease, visibility $duration ease;
       color: $c-header-title;
       flex: 0 0 auto;
+      @include size($circleSize * 0.5, auto);
       &:first-of-type {
         opacity: 0;
         visibility: hidden;
@@ -30,6 +32,30 @@ $circleDummySize: $circleSize + 30px;
       &:last-of-type {
         opacity: 1;
         visibility: visible;
+      }
+      &.circle {
+        @include size($circleSize * 0.65, auto);
+        margin-top: 2px;
+      }
+      &.phone {
+        @include size($circleSize * 0.4, auto);
+        margin-top: 1px;
+      }
+      &.note {
+        margin-left: 4px;
+        margin-top: 2px;
+        @include size($circleSize * 0.55, auto);
+      }
+      &.hand--hi {
+        @include size($circleSize * 0.45, auto);
+      }
+      &.hand--currency {
+        @include size($circleSize * 0.6, auto);
+        margin-right: 1px;
+        margin-top: -2px;
+      }
+      &.data {
+        @include size($circleSize * 0.6, auto);
       }
     }
 
@@ -46,23 +72,17 @@ $circleDummySize: $circleSize + 30px;
       background-color: white;
       cursor: pointer;
       user-select: none;
-      &:nth-child(2) {
-        transform: translateX(120%);
+      @for $i from 2 through 10 {
+        &:nth-child(#{$i}) {
+          transform: translateX(($i - 1) * $sliderIncrement);
+        }
       }
-      &:nth-child(3) {
-        transform: translateX(230%);
-      }
-      &:nth-child(4) {
-        transform: translateX(340%);
-      }
+
       &.active {
         background-color: $c-orange;
         transform: translateX(0) scale(1.1);
-        //transform-origin: top center;
         z-index: 2;
         .faq__slider-image {
-          background-color: darkorange;
-          color: white;
           &:first-of-type {
             opacity: 1;
             visibility: visible;
