@@ -1,8 +1,9 @@
 const Slider = {
-	transformIncrementCircles: 115,
+	transformIncrementCircles: 105,
 	currentIndex: 0,
 	previousCount: 0,
 	nextCount: 0,
+	scaleNotActive: 0.83,
 
 	elements() {
         this.slides = document.querySelectorAll('.faq__slider-item');
@@ -30,14 +31,14 @@ const Slider = {
 		for(let i = this.currentIndex - 1; i >= 0; i--) {
             this.previousCount++;
             this.slides[i].classList.remove('active');
-            this.slides[i].style.transform = `translate3d(-${this.previousCount * this.transformIncrementCircles}%, 0, 0)`;
+            this.slides[i].style.transform = `translate3d(-${this.previousCount * this.transformIncrementCircles}%, 0, 0) scale(${this.scaleNotActive})`;
 		}
 
         /* GET NEXT SIBLINGS */
         for(let i = this.currentIndex + 1; i < this.slidesLength; i++) {
             this.nextCount++;
             this.slides[i].classList.remove('active');
-            this.slides[i].style.transform = `translate3d(${this.nextCount * this.transformIncrementCircles}%, 0, 0)`;
+            this.slides[i].style.transform = `translate3d(${this.nextCount * this.transformIncrementCircles}%, 0, 0) scale(${this.scaleNotActive})`;
         }
 
         this.previousCount = 0;
