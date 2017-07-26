@@ -1,0 +1,135 @@
+$i-dark: #4a4a4a;
+$i-grey-light: #C8C8C8;
+$i-light: #ebebeb;
+$i-light-darker: #dcdbdb;
+%fill-transition {
+  transition: fill $tr-duration ease;
+}
+
+%fill-transition-opacity {
+  transition: fill-opacity $tr-duration ease;
+  .faq__slider-item.active & {
+    fill-opacity: 0.4;
+  }
+}
+
+%fill-dark {
+  @extend %fill-transition;
+  fill: $i-dark;
+  .faq__slider-item.active & {
+    fill: $i-light;
+  }
+}
+
+%fill-light {
+  @extend %fill-transition-opacity;
+  fill: $i-light;
+}
+
+%fill-grey-light {
+  @extend %fill-transition;
+  fill: $i-grey-light;
+  .faq__slider-item.active & {
+    fill: $i-light;
+  }
+}
+
+%fill-light-darker {
+  @extend %fill-transition;
+  fill: $i-light-darker;
+}
+
+#i {
+  &__01 {
+    &-currency {
+      &--hand {
+        @extend %fill-dark;
+      }
+      &--yuan {
+        @extend %fill-grey-light;
+      }
+    }
+  }
+  &__03 {
+    &-phone {
+      &--topbottom {
+        @extend %fill-light;
+      }
+      &--button, &--bezel, &--face {
+        @extend %fill-dark;
+      }
+    }
+  }
+  &__05 {
+    &-moneyinhand {
+      &--hand {
+        @extend %fill-dark;
+      }
+      &--money {
+        @extend %fill-grey-light;
+      }
+    }
+  }
+  &__07 {
+    &-warning {
+      &--body {
+        @extend %fill-dark;
+      }
+      &--content {
+        @extend %fill-light-darker;
+      }
+    }
+  }
+  &__09 {
+    &-cake {
+      @extend %fill-dark;
+    }
+  }
+  &__10 {
+    &-support {
+      &--hair {
+        @extend %fill-grey-light;
+      }
+      &--headphones {
+        @extend %fill-dark;
+      }
+    }
+  }
+  &__11 {
+    &-letter {
+      &--paper {
+        @extend %fill-dark;
+      }
+      &--text {
+        @extend %fill-grey-light;
+        fill-opacity: 0.5;
+      }
+    }
+  }
+  &__12 {
+    &-disk {
+      &--bottom {
+        @extend %fill-light;
+      }
+      &--content, &--sidedot {
+        @extend %fill-grey-light;
+      }
+      &--bezel, &--bottomdot {
+        @extend %fill-dark;
+      }
+    }
+  }
+  &__14 {
+    &-circle {
+      &--big, &--arrow {
+        @extend %fill-dark;
+      }
+      &--small {
+        @extend %fill-grey-light;
+      }
+      &--filled {
+        @extend %fill-light;
+      }
+    }
+  }
+}
