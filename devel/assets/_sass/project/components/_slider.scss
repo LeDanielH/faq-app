@@ -1,9 +1,10 @@
 //$mw-slider: 320px;
-$circleSize: 82px;
+$circleSize: 94px;
 $circleDummySize: $circleSize + 30px;
-$sliderIncrement: 115%;
+$sliderIncrement: 105%;
 $c-blur-notactive: rgba(217,217,217,0.5);
 $c-blur-active: rgba(255,133,11,0.5);
+$initialScale: 0.83;
 .faq {
   header {
     position: relative;
@@ -25,14 +26,12 @@ $c-blur-active: rgba(255,133,11,0.5);
       color: $c-header-title;
       flex: 0 0 auto;
       @include size($circleSize * 0.5, auto);
-      &:first-of-type {
-        opacity: 0;
-        visibility: hidden;
+
+      svg {
+        width: 100%;
+        height: auto;
       }
-      &:last-of-type {
-        opacity: 1;
-        visibility: visible;
-      }
+
       &.circle {
         @include size($circleSize * 0.65, auto);
         margin-top: 2px;
@@ -41,20 +40,20 @@ $c-blur-active: rgba(255,133,11,0.5);
         @include size($circleSize * 0.4, auto);
         margin-top: 1px;
       }
-      &.note {
-        margin-left: 4px;
+      &.letter {
+        margin-left: 5px;
         margin-top: 2px;
-        @include size($circleSize * 0.55, auto);
+        @include size($circleSize * 0.53, auto);
       }
-      &.hand--hi {
+      &.moneyinhand {
         @include size($circleSize * 0.45, auto);
       }
-      &.hand--currency {
+      &.currency {
         @include size($circleSize * 0.6, auto);
         margin-right: 1px;
         margin-top: -2px;
       }
-      &.data {
+      &.disk {
         @include size($circleSize * 0.6, auto);
       }
     }
@@ -75,25 +74,17 @@ $c-blur-active: rgba(255,133,11,0.5);
       box-shadow: 0px 0px 10px 1px $c-blur-notactive;
       @for $i from 2 through 10 {
         &:nth-child(#{$i}) {
-          transform: translate3d(($i - 1) * $sliderIncrement, 0, 0);
+          transform: translate3d(($i - 1) * $sliderIncrement, 0, 0) scale($initialScale);
         }
       }
 
       &.active {
         background-color: $c-orange;
-        transform: translate3d(0, 0, 0) scale(1.13);
+        transform: translate3d(0, 0, 0) scale(1);
         transform-origin: center top;
         box-shadow: 0px 0px 10px 2px $c-blur-active;
         .faq__slider-image {
           transform: translate3d(-50%, -50%, 0) scale(1);
-          &:first-of-type {
-            opacity: 1;
-            visibility: visible;
-          }
-          &:last-of-type {
-            opacity: 0;
-            visibility: hidden;
-          }
         }
       }
     }
