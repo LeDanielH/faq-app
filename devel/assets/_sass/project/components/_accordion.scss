@@ -15,8 +15,10 @@
     &-content {
       max-height: 0;
       opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
       display: block;
-      transition: all $duration ease;
+      transition: all $tr-duration ease;
       user-select: none;
       border-top: 1px solid $c-border-grey;
       color: $c-accordion-content;
@@ -70,6 +72,7 @@
           max-height: 200px;
           opacity: 1;
           user-select: auto;
+          visibility: visible;
           @include padding($spacing null);
         }
         .faq__accordion-label {
