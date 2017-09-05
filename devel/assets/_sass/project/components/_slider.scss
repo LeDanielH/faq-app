@@ -1,5 +1,5 @@
 //$mw-slider: 320px;
-$circleSize: 94px;
+$circleSize: 105px;
 $circleDummySize: $circleSize + 30px;
 $sliderIncrement: 105%;
 $c-blur-notactive: rgba(217,217,217,0.5);
@@ -11,13 +11,9 @@ $initialScale: 0.83;
   }
   &__slider {
     position: relative;
-    display: flex;
-    justify-content: center;
-    //align-items: center;
     @include padding($spacing);
     @include size(auto, 92px);
     background-color: $c-header-background;
-    //overflow: hidden;
 
     &-image {
       @include position(absolute, 50% null null 50%);
@@ -61,9 +57,9 @@ $initialScale: 0.83;
     &-item {
       @include size($circleSize);
       border-radius: 50%;
-      @include padding(5px);
       flex: 0 0 $circleSize;
-      position: absolute;
+      @include position(absolute, 9px null null 50%);
+      margin-left: -(($circleSize)/2);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,6 +68,7 @@ $initialScale: 0.83;
       cursor: pointer;
       user-select: none;
       box-shadow: 0px 0px 10px 1px $c-blur-notactive;
+      box-sizing: border-box;
       @for $i from 2 through 10 {
         &:nth-child(#{$i}) {
           transform: translate3d(($i - 1) * $sliderIncrement, 0, 0) scale($initialScale);
