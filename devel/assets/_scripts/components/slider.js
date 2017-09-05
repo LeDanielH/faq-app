@@ -25,7 +25,7 @@ const Slider = {
 	switchSlide(element) {
 		this.currentIndex = parseInt(element.dataset.page - 1);
 		element.classList.add('active');
-		element.style.transform = null;
+		element.removeAttribute("style");
 
 		/* GET PREVIOUS SIBLINGS */
 		for(let i = this.currentIndex - 1; i >= 0; i--) {
